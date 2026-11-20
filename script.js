@@ -77,11 +77,29 @@ carousel.addEventListener("focusout", startCarousel);
 reduceMotion.addEventListener("change", startCarousel);
 startCarousel();
 
-const backToTop = document.querySelector(".back-to-top");
+const scrollToggle = document.querySelector(".scroll-toggle");
+let scrollDirection = "down";
 
-function updateBackToTop() {
-  backToTop.classList.toggle("visible", window.scrollY > 300);
+function updateScrollToggle() {
+  const atTop = window.scrollY === 0;
+  const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 1;
+  if (atTop) {
+    scrollDirection = "down";
+  } else if (atBottom) {
+    scrollDirection = "up";
+  }
+  const scrollDown = scrollDirection === "down";
+  scrollToggle.textContent = scrollDown ? "↓" : "↑";
+  scrollToggle.setAttribute("aria-label", scrollDown ? "Scroll to bottom" : "Back to top");
 }
 
-window.addEventListener("scroll", updateBackToTop, { passive: true });
-updateBackToTop();
+scrollToggle.addEventListener("click", () => {
+  const behavior = reduceMotion.matches ? "auto" : "smooth";
+  const direction = scrollDirection === "down" ? 1 : -1;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const target = window.scrollY + direction * window.innerHeight;
+  window.scrollTo({ top: Math.min(maxScroll, Math.max(0, target)), behavior });
+});
+
+window.addEventListener("scroll", updateScrollToggle, { passive: true });
+updateScrollToggle();

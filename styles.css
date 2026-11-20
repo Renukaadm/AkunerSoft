@@ -420,7 +420,7 @@ a {
   margin: 0;
 }
 
-.back-to-top {
+.scroll-toggle {
   position: fixed;
   z-index: 10;
   right: 20px;
@@ -428,12 +428,15 @@ a {
   display: grid;
   width: 42px;
   height: 42px;
+  padding: 0;
   place-items: center;
   border-radius: 3px;
+  border: 0;
   background: var(--accent);
   color: #fff;
+  cursor: pointer;
   font-size: 23px;
-  text-decoration: none;
+  font-family: inherit;
   box-shadow: 0 2px 8px rgb(0 0 0 / 18%);
 }
 
