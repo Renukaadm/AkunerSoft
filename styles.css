@@ -47,17 +47,68 @@ a {
 }
 
 .topbar {
+  display: flex;
   min-height: 36px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   padding: 6px max(20px, calc((100% - var(--container)) / 2));
-  background: #f5f6f7;
-  color: #5b6066;
+  background-color: #48678f;
+  color: #fff;
   font-size: 13px;
-  text-align: right;
 }
 
 .topbar a,
 .site-footer a {
   text-decoration: none;
+}
+
+.topbar-social {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.topbar-social::before,
+.topbar-social::after {
+  display: block;
+  width: 1px;
+  height: 18px;
+  background-color: #fff;
+  content: "";
+}
+
+.topbar-social a {
+  position: relative;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+}
+
+.topbar-social a + a::before {
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  width: 1px;
+  height: 18px;
+  background-color: #fff;
+  content: "";
+}
+
+.topbar-social a:hover {
+  opacity: 0.75;
+}
+
+.topbar-social a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.topbar-social svg {
+  display: block;
+  width: 19px;
+  height: 19px;
 }
 
 .navigation {
@@ -498,6 +549,9 @@ a {
   }
 
   .topbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 18px;
     text-align: center;
   }
 
