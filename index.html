@@ -1,216 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AkunerSoft | Custom Software & Cloud Solutions</title>
-
-<meta name="description"
-content="Custom Software Development, AWS Cloud Consulting, React Development, .NET Solutions, Digital Transformation and Enterprise Applications.">
-
-<link rel="stylesheet" href="styles.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AkunerIT delivers web development, automation, DevOps, digital marketing, IT staffing, and data management services.">
+  <title>AkunerIT | IT Services and Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-
-<header>
-
-<nav>
-
-<div class="logo">
-
-AkunerSoft
-
-</div>
-
-<ul>
-
-<li><a href="#home">Home</a></li>
-
-<li><a href="#services">Services</a></li>
-
-<li><a href="#portfolio">Portfolio</a></li>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-<section id="home" class="hero">
-
-<div class="hero-content">
-
-<h1>
-Building Modern Enterprise Software
-</h1>
-
-<p>
-
-React • Angular • .NET • AWS
-
-</p>
-
-<a href="#contact" class="btn">
-Free Consultation
-</a>
-
-</div>
-
-</section>
-
-<section id="services">
-
-<h2>Services</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Custom Software Development</h3>
-
-<p>
-Enterprise-grade applications built with modern technologies.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Cloud Solutions</h3>
-
-<p>
-AWS cloud migration, architecture and optimization.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Frontend Development</h3>
-
-<p>
-React, Angular and accessibility-first user experiences.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Application Modernization</h3>
-
-<p>
-Transform legacy systems into scalable cloud-native applications.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="portfolio">
-
-<h2>Projects</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Healthcare Portal</h3>
-
-<p>
-Accessible patient management platform.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Cloud Migration Program</h3>
-
-<p>
-Migration of business applications to AWS.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Enterprise Dashboard</h3>
-
-<p>
-Business analytics and reporting solution.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="about">
-
-<h2>About AkunerSoft</h2>
-
-<p class="about-text">
-
-AkunerSoft helps startups and enterprises
-build modern software, optimize cloud infrastructure,
-and accelerate digital transformation.
-
-</p>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact Us</h2>
-
-<form
-action="https://formspree.io/f/your-form-id"
-method="POST"
->
-
-<input
-type="text"
-placeholder="Your Name"
-required
->
-
-<input
-type="email"
-placeholder="Email"
-required
->
-
-<textarea
-placeholder="Tell us about your project"
-required
-></textarea>
-
-<button type="submit">
-
-Send Message
-
-</button>
-
-</form>
-
-</section>
-
-<footer>
-
-© 2026 AkunerSoft
-
-</footer>
-
+  <header class="site-header">
+    <div class="topbar">
+      <a href="mailto:info@akunerit.com">✉ info@akunerit.com</a>
+    </div>
+    <nav class="navigation" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="AkunerIT home">
+        <img src="images/logo21.png" alt="AkunerIT">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="https://www.akunerit.com/about.html">About Us</a></li>
+        <li class="services-menu">
+          <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-submenu">Services <span aria-hidden="true">⌄</span></button>
+          <ul class="dropdown-menu" id="services-submenu">
+            <li><a href="#web-development">Web Development</a></li>
+            <li><a href="#automation-services">Automation Services</a></li>
+            <li><a href="#devops-solutions">DevOps Solutions</a></li>
+            <li><a href="#digital-marketing">Digital Marketing</a></li>
+            <li><a href="#it-staffing">IT Staffing</a></li>
+            <li><a href="#data-management">Data Management</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="https://www.akunerit.com/portfolio.html">Portfolio</a></li>
+        <li><a class="nav-link" href="https://www.akunerit.com/careers.html">Careers</a></li>
+        <li><a class="nav-link" href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-label="Featured slides">
+      <div class="carousel" aria-roledescription="carousel" aria-label="AkunerIT highlights">
+        <div class="slides">
+          <div class="slide active" aria-hidden="false"><img src="images/banner1.jpg" alt="AkunerIT featured services"></div>
+          <div class="slide" aria-hidden="true"><img src="images/banner2.jpg" alt="Technology and innovation"></div>
+          <div class="slide" aria-hidden="true"><img src="images/banner3.jpg" alt="Business technology solutions"></div>
+          <div class="slide" aria-hidden="true"><img src="images/banner4.jpg" alt="AkunerIT digital services"></div>
+          <div class="slide" aria-hidden="true"><img src="images/banner5.jpg" alt="AkunerIT team and solutions"></div>
+        </div>
+        <button class="carousel-control previous" type="button" aria-label="Previous slide">‹</button>
+        <button class="carousel-control next" type="button" aria-label="Next slide">›</button>
+        <div class="carousel-indicators" aria-label="Choose a slide">
+          <button class="active" type="button" aria-label="Slide 1" aria-current="true"></button>
+          <button type="button" aria-label="Slide 2"></button>
+          <button type="button" aria-label="Slide 3"></button>
+          <button type="button" aria-label="Slide 4"></button>
+          <button type="button" aria-label="Slide 5"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section" id="services">
+      <div class="container service-grid">
+        <article class="service-card" id="web-development">
+          <img src="images/icon1.png" alt="" loading="lazy">
+          <div><h2>Web Development</h2><p>AkunerIT is a leading and fast-growing web design company, specializing in organizational portfolio websites and web development.</p></div>
+        </article>
+        <article class="service-card" id="automation-services">
+          <img src="images/icon2.png" alt="" loading="lazy">
+          <div><h2>Automation Services</h2><p>Businesses are rapidly adopting automation to manage rising operating costs and improve efficiency.</p></div>
+        </article>
+        <article class="service-card" id="devops-solutions">
+          <img src="images/icon3.png" alt="" loading="lazy">
+          <div><h2>DevOps Solutions</h2><p>AkunerIT helps businesses deploy DevOps and supports continuous integration and delivery processes.</p></div>
+        </article>
+        <article class="service-card" id="digital-marketing">
+          <img src="images/icon4.png" alt="" loading="lazy">
+          <div><h2>Digital Marketing</h2><p>AkunerIT provides a full suite of digital marketing services to help organizations reach their goals.</p></div>
+        </article>
+        <article class="service-card" id="it-staffing">
+          <img src="images/icon5.png" alt="" loading="lazy">
+          <div><h2>IT Staffing</h2><p>AkunerIT connects corporate customers with qualified technology professionals.</p></div>
+        </article>
+        <article class="service-card" id="data-management">
+          <img src="images/icon6.png" alt="" loading="lazy">
+          <div><h2>Data Management</h2><p>Organized, well-managed data helps businesses track information and support day-to-day operations.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container about-grid">
+        <img class="about-image" src="images/about-02.jpg" alt="AkunerIT technology services" loading="lazy">
+        <div class="about-copy">
+          <p class="eyebrow">Who we are</p>
+          <h2>Welcome to AkunerIT</h2>
+          <p>At AkunerIT, our vision is to provide favorable solutions within budget constraints and deliver innovative, client-centric IT services. We enable enterprises and associates with advanced platforms and reusable assets to create measurable business value.</p>
+          <p>Our experts work across service areas and emerging technologies. From Oracle, Java, and Python to customized applications, we shape solutions around each customer's needs.</p>
+          <a class="button" href="https://www.akunerit.com/about.html">View More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="AkunerIT at a glance">
+      <div class="container metric-grid">
+        <div class="metric"><span class="metric-icon" aria-hidden="true">♙</span><h2>Professional team</h2><p>25</p></div>
+        <div class="metric"><span class="metric-icon" aria-hidden="true">▣</span><h2>Projects Completed</h2><p>20</p></div>
+        <div class="metric"><span class="metric-icon" aria-hidden="true">◷</span><h2>Years of Experience</h2><p>5+</p></div>
+        <div class="metric"><span class="metric-icon" aria-hidden="true">♡</span><h2>Happy Clients</h2><p>20</p></div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container contact-content">
+        <p class="eyebrow">Let's work together</p>
+        <h2>Get in touch with AkunerIT</h2>
+        <p>Tell us about your project and how we can help.</p>
+        <a class="button" href="mailto:info@akunerit.com">Email info@akunerit.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <h2>Contact</h2>
+        <p>Melange Tower, Madhapur</p>
+        <p><a href="tel:+918801143678">+91 8801143678</a></p>
+        <p><a href="mailto:info@akunerit.com">info@akunerit.com</a></p>
+      </div>
+      <p class="copyright">Copyright © 2026 AkunerIT</p>
+    </div>
+  </footer>
+  <a class="back-to-top" href="#home" aria-label="Back to top">↑</a>
 </body>
 </html>
