@@ -654,6 +654,60 @@ a {
   margin-top: 8px;
 }
 
+.service-copy h2 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 500;
+}
+
+.service-list {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.service-list li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.service-list li::before {
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  content: "✓";
+  font-weight: 700;
+}
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 42px;
+}
+
+.service-detail-card {
+  padding: 26px;
+  border: 1px solid #e7e9ec;
+  border-radius: 5px;
+  background: #f4f6f8;
+}
+
+.service-detail-card h2 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.service-detail-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .about-page > .section {
   padding-block: 32px;
 }
@@ -1246,6 +1300,10 @@ a {
 
   .service-content {
     gap: 32px;
+  }
+
+  .service-detail-grid {
+    grid-template-columns: 1fr;
   }
 
   .portfolio-panel-grid {
