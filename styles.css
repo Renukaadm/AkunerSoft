@@ -624,6 +624,36 @@ a {
   opacity: .9;
 }
 
+.service-page > .section {
+  padding-top: 58px;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 42px;
+}
+
+.service-feature-image {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 10px 28px rgb(30 38 45 / 10%);
+}
+
+.service-copy {
+  color: var(--muted);
+}
+
+.service-copy p {
+  margin: 0 0 18px;
+}
+
+.service-copy .button {
+  margin-top: 8px;
+}
+
 .about-page > .section {
   padding-block: 32px;
 }
@@ -1210,6 +1240,14 @@ a {
     padding-top: 42px;
   }
 
+  .service-page > .section {
+    padding-top: 42px;
+  }
+
+  .service-content {
+    gap: 32px;
+  }
+
   .portfolio-panel-grid {
     grid-template-columns: 1fr;
   }
@@ -1255,6 +1293,10 @@ a {
   }
 
   .portfolio-page > .section {
+    padding-top: 32px;
+  }
+
+  .service-page > .section {
     padding-top: 32px;
   }
 

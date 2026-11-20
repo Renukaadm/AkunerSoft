@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AkunerIT creates creative, customized websites and web development solutions for businesses.">
+  <title>Web Development | AkunerIT</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topbar"><a class="topbar-email" href="mailto:info@akunerit.com">✉ info@akunerit.com</a></div>
+    <nav class="navigation" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="AkunerIT home"><img src="images/logo21.png" alt="AkunerIT"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="services-menu">
+          <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-submenu">Services <span aria-hidden="true">⌄</span></button>
+          <ul class="dropdown-menu" id="services-submenu">
+            <li><a href="webdevelopment.html" aria-current="page">Web Development</a></li>
+            <li><a href="index.html#automation-services">Automation Services</a></li>
+            <li><a href="index.html#devops-solutions">DevOps Solutions</a></li>
+            <li><a href="index.html#digital-marketing">Digital Marketing</a></li>
+            <li><a href="index.html#it-staffing">IT Staffing</a></li>
+            <li><a href="index.html#data-management">Data Management</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li><a class="nav-link" href="careers.html">Careers</a></li>
+        <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="service-page">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">AkunerIT services</p>
+        <h1>Web Development</h1>
+        <p>Creative websites built around your business goals</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container service-content">
+        <img class="service-feature-image" src="images/web.jpg" alt="Web development and design services">
+        <div class="service-copy">
+          <p>AkunerIT is a leading and fast-growing web design company, specializing in creating organizational portfolio websites and web development. Our services include website design, website development, content writing, graphic design, digital marketing, search engine optimization, and more.</p>
+          <p>If you are looking for your company to build a creative website or redesign an existing one that is not performing, AkunerIT is the right place to help you create a stronger web presence.</p>
+          <p>We create customized websites that offer a rich user experience and help drive enquiries. Get in touch with AkunerIT and get your project started.</p>
+          <a class="button" href="contact.html">Start your project</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div><h2>Contact</h2><p><a href="tel:+16475738444">Phone: +1 647.573.8444</a></p><p><a href="mailto:info@akunerit.com">Mailto: info@akunerit.com</a></p></div>
+      <p class="copyright">Copyright © 2026 AkunerIT</p>
+    </div>
+  </footer>
+  <button class="scroll-toggle" type="button" aria-label="Scroll to bottom">↓</button>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+    const servicesMenu = document.querySelector(".services-menu");
+    const servicesToggle = document.querySelector(".dropdown-toggle");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") !== "true";
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      navMenu.classList.toggle("open", isOpen);
+    });
+    servicesToggle.addEventListener("click", () => {
+      const isOpen = servicesToggle.getAttribute("aria-expanded") !== "true";
+      servicesToggle.setAttribute("aria-expanded", String(isOpen));
+      servicesMenu.classList.toggle("open", isOpen);
+    });
+    navMenu.addEventListener("click", (event) => {
+      if (event.target.closest(".dropdown-menu a")) {
+        servicesToggle.setAttribute("aria-expanded", "false");
+        servicesMenu.classList.remove("open");
+      }
+      if (event.target.closest("a") && navMenu.classList.contains("open")) {
+        navMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+      }
+    });
+    const scrollToggle = document.querySelector(".scroll-toggle");
+    let scrollDirection = "down";
+    function updateScrollToggle() {
+      if (window.scrollY === 0) scrollDirection = "down";
+      else if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 1) scrollDirection = "up";
+      const scrollDown = scrollDirection === "down";
+      scrollToggle.textContent = scrollDown ? "↓" : "↑";
+      scrollToggle.setAttribute("aria-label", scrollDown ? "Scroll to bottom" : "Back to top");
+    }
+    scrollToggle.addEventListener("click", () => {
+      const direction = scrollDirection === "down" ? 1 : -1;
+      window.scrollTo({ top: direction === 1 ? document.documentElement.scrollHeight : 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    });
+    window.addEventListener("scroll", updateScrollToggle, { passive: true });
+    updateScrollToggle();
+  </script>
+</body>
+</html>
