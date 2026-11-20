@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore AkunerIT's HR, technical, and sales teams.">
+  <title>Portfolio | AkunerIT</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topbar"><a class="topbar-email" href="mailto:info@akunerit.com">✉ info@akunerit.com</a></div>
+    <nav class="navigation" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="AkunerIT home"><img src="images/logo21.png" alt="AkunerIT"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="services-menu">
+          <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-submenu">Services <span aria-hidden="true">⌄</span></button>
+          <ul class="dropdown-menu" id="services-submenu">
+            <li><a href="index.html#web-development">Web Development</a></li>
+            <li><a href="index.html#automation-services">Automation Services</a></li>
+            <li><a href="index.html#devops-solutions">DevOps Solutions</a></li>
+            <li><a href="index.html#digital-marketing">Digital Marketing</a></li>
+            <li><a href="index.html#it-staffing">IT Staffing</a></li>
+            <li><a href="index.html#data-management">Data Management</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link active" href="portfolio.html" aria-current="page">Portfolio</a></li>
+        <li><a class="nav-link" href="careers.html">Careers</a></li>
+        <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="portfolio-page">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Portfolio</h1>
+        <p>Meet the teams behind AkunerIT's solutions</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="portfolio-tabs" role="tablist" aria-label="AkunerIT teams">
+          <button class="portfolio-tab active" id="hr-tab" type="button" role="tab" aria-selected="true" aria-controls="hr-panel"><span class="portfolio-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.5-3 2.3-4.5 5.5-4.5s5 1.5 5.5 4.5"/><path d="M15 5.5a3 3 0 0 1 0 5.8M16 14.7c2.6.3 4 1.7 4.5 4.3"/></svg></span>HR Team</button>
+          <button class="portfolio-tab" id="technical-tab" type="button" role="tab" aria-selected="false" aria-controls="technical-panel" tabindex="-1"><span class="portfolio-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m9.7 3.2.5 1.8a7.7 7.7 0 0 1 3.6 0l.5-1.8 2.1.9-.7 1.8a7.8 7.8 0 0 1 2.5 2.5l1.8-.7.9 2.1-1.8.5a7.7 7.7 0 0 1 0 3.6l1.8.5-.9 2.1-1.8-.7a7.8 7.8 0 0 1-2.5 2.5l.7 1.8-2.1.9-.5-1.8a7.7 7.7 0 0 1-3.6 0l-.5 1.8-2.1-.9.7-1.8a7.8 7.8 0 0 1-2.5-2.5l-1.8.7-.9-2.1 1.8-.5a7.7 7.7 0 0 1 0-3.6l-1.8-.5.9-2.1 1.8.7a7.8 7.8 0 0 1 2.5-2.5l-.7-1.8z"/><circle cx="12" cy="12" r="3.1" fill="var(--surface, #fff)"/></svg></span>Technical Team</button>
+          <button class="portfolio-tab" id="sales-tab" type="button" role="tab" aria-selected="false" aria-controls="sales-panel" tabindex="-1"><span class="portfolio-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 18.5V14M9.3 18.5V11M14.7 18.5V7.5M20 18.5V4.5"/><path d="m4 10 5-4 4 2 6-5"/><path d="M15.8 3H19v3.2"/></svg></span>Sales Team</button>
+        </div>
+
+        <article class="portfolio-panel" id="hr-panel" role="tabpanel" aria-labelledby="hr-tab">
+          <img class="portfolio-wide-image" src="images/hr.jpg" alt="AkunerIT HR team collaborating">
+          <div class="portfolio-panel-grid">
+            <div>
+              <h2>HR Team</h2>
+              <p>Looking to recruit a large number of talents? Our professional HR resources can help you improve your team quickly. Our HR team has a keen eye for the right candidate, and our prescreening process saves time by helping you interview the best candidates.</p>
+              <p>AkunerIT provides a wide range of staffing and human resource consulting services. We offer on-site, off-site, or combined support that best meets each customer's needs.</p>
+            </div>
+            <img src="images/hr_team.jpg" alt="AkunerIT HR professionals">
+          </div>
+        </article>
+
+        <article class="portfolio-panel" id="technical-panel" role="tabpanel" aria-labelledby="technical-tab" hidden>
+          <img class="portfolio-wide-image" src="images/tm.jpg" alt="AkunerIT technical team">
+          <div class="portfolio-panel-grid">
+            <div>
+              <h2>Technical Team</h2>
+              <p>AkunerIT Consulting provides enterprises with high-quality IT and custom software solutions. Our expert team develops solutions that match business processes and requirements.</p>
+              <p>We support clients at every step, from concepts and development to implementation and post-launch initiatives such as testing, maintenance, and optimization.</p>
+            </div>
+            <img src="images/technical.jpg" alt="AkunerIT technical team at work">
+          </div>
+        </article>
+
+        <article class="portfolio-panel" id="sales-panel" role="tabpanel" aria-labelledby="sales-tab" hidden>
+          <img class="portfolio-wide-image" src="images/st.jpg" alt="AkunerIT sales team">
+          <div class="portfolio-panel-grid">
+            <div>
+              <h2>Sales Team</h2>
+              <p>Revenue growth is an important measure of every business. AkunerIT's sales team is designed to help increase company revenue while supporting customer growth and productivity.</p>
+              <p>We continuously speak with our customers to understand their issues and plan ways to overcome them, using performance and return-on-investment insights to guide our approach.</p>
+            </div>
+            <img src="images/sales.jpg" alt="AkunerIT sales professionals">
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div><h2>Contact</h2><p><a href="tel:+16475738444">Phone: +1 647.573.8444</a></p><p><a href="mailto:info@akunerit.com">Mailto: info@akunerit.com</a></p></div>
+      <p class="copyright">Copyright © 2026 AkunerIT</p>
+    </div>
+  </footer>
+  <button class="scroll-toggle" type="button" aria-label="Scroll to bottom">↓</button>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+    const servicesMenu = document.querySelector(".services-menu");
+    const servicesToggle = document.querySelector(".dropdown-toggle");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") !== "true";
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      navMenu.classList.toggle("open", isOpen);
+    });
+    servicesToggle.addEventListener("click", () => {
+      const isOpen = servicesToggle.getAttribute("aria-expanded") !== "true";
+      servicesToggle.setAttribute("aria-expanded", String(isOpen));
+      servicesMenu.classList.toggle("open", isOpen);
+    });
+    navMenu.addEventListener("click", (event) => {
+      if (event.target.closest(".dropdown-menu a")) {
+        servicesToggle.setAttribute("aria-expanded", "false");
+        servicesMenu.classList.remove("open");
+      }
+      if (event.target.closest("a") && navMenu.classList.contains("open")) {
+        navMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+      }
+    });
+    const tabs = [...document.querySelectorAll(".portfolio-tab")];
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((item) => {
+          const selected = item === tab;
+          item.classList.toggle("active", selected);
+          item.setAttribute("aria-selected", String(selected));
+          item.tabIndex = selected ? 0 : -1;
+          document.getElementById(item.getAttribute("aria-controls")).hidden = !selected;
+        });
+      });
+      tab.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+        event.preventDefault();
+        tabs[(index + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length].focus();
+      });
+    });
+    const scrollToggle = document.querySelector(".scroll-toggle");
+    let scrollDirection = "down";
+    function updateScrollToggle() {
+      if (window.scrollY === 0) scrollDirection = "down";
+      else if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 1) scrollDirection = "up";
+      const scrollDown = scrollDirection === "down";
+      scrollToggle.textContent = scrollDown ? "↓" : "↑";
+      scrollToggle.setAttribute("aria-label", scrollDown ? "Scroll to bottom" : "Back to top");
+    }
+    scrollToggle.addEventListener("click", () => {
+      const direction = scrollDirection === "down" ? 1 : -1;
+      window.scrollTo({ top: direction === 1 ? document.documentElement.scrollHeight : 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    });
+    window.addEventListener("scroll", updateScrollToggle, { passive: true });
+    updateScrollToggle();
+  </script>
+</body>
+</html>

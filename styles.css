@@ -858,6 +858,104 @@ a {
   font-weight: 700;
 }
 
+.portfolio-page > .section {
+  padding-top: 58px;
+}
+
+.portfolio-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #dfe3e6;
+}
+
+.portfolio-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.portfolio-tab-icon {
+  display: inline-grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.portfolio-tab-icon svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.portfolio-tab-icon svg path:first-child {
+  fill: currentColor;
+}
+
+.portfolio-tab:hover,
+.portfolio-tab:focus-visible,
+.portfolio-tab.active {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+.portfolio-panel {
+  padding: 30px;
+  border: 1px solid #e7e9ec;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(30 38 45 / 6%);
+}
+
+.portfolio-wide-image {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.portfolio-panel-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, .42fr);
+  align-items: center;
+  gap: 32px;
+  margin-top: 28px;
+}
+
+.portfolio-panel h2 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 500;
+}
+
+.portfolio-panel p {
+  color: var(--muted);
+}
+
+.portfolio-panel-grid > img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+
 .contact-card {
   padding: 30px;
   border: 1px solid #e7e9ec;
@@ -1107,6 +1205,14 @@ a {
   .careers-page > .section {
     padding-top: 42px;
   }
+
+  .portfolio-page > .section {
+    padding-top: 42px;
+  }
+
+  .portfolio-panel-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 620px) {
@@ -1146,6 +1252,23 @@ a {
 
   .careers-page > .section {
     padding-top: 32px;
+  }
+
+  .portfolio-page > .section {
+    padding-top: 32px;
+  }
+
+  .portfolio-tabs {
+    margin-bottom: 16px;
+  }
+
+  .portfolio-tab {
+    flex: 1 1 100%;
+    text-align: left;
+  }
+
+  .portfolio-panel {
+    padding: 24px;
   }
 
   .opening-list {
